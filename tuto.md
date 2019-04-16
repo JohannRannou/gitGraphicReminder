@@ -102,8 +102,23 @@ différence entre l'état courant (*working*) avec le dernier commit
 git diff HEAD
 ```
 
-
 différence entre deux commits
 ```
-git diff 
+git diff 3e3c08b 6b89ffa
 ```
+
+
+### Changer de version
+
+Changer de version permet de revenir à des versions précédentes (qui fonctionnait, qui avait permit de faire un calcul qu'on avait montré dans telle présentation).
+
+Dans ce cas là il faut avoir un *working directory* **propre**, c'est à dire que tous les fichiers *trackés* doivent être commité.
+Dans ce cas : 
+
+```
+git checkout 6b89ffa
+```
+
+Si le  *working directory* n'est pas propre, on peut "remiser" ce qui n'est pas propre et le "resortir" par la suite.
+C'est temporaire!
+Attention, comme ces modifications locales pas propres n'ont pas été commitées, on peut les perdre en cas de fausse manip
